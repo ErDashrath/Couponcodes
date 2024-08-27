@@ -22,7 +22,7 @@ function Home() {
 
     const fetchProducts = async () => {
         try {
-            const url = "https://couponcodes-api.vercel.app/products";
+            const url = "https://deploy-mern-app-1-api.vercel.app/products";
             const headers = {
                 headers: {
                     'Authorization': localStorage.getItem('token')
@@ -42,9 +42,9 @@ function Home() {
 
     return (
         <div>
-            <h1>Welcome to SwapCode {loggedInUser}</h1>
+            <h1>Welcome {loggedInUser}</h1>
             <button onClick={handleLogout}>Logout</button>
-            {/* <div>
+            <div>
                 {
                     products && products?.map((item, index) => (
                         <ul key={index}>
@@ -52,7 +52,7 @@ function Home() {
                         </ul>
                     ))
                 }
-            </div> */}
+            </div>
             <ToastContainer />
         </div>
     )
