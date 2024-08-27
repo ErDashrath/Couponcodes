@@ -5,8 +5,8 @@ require('dotenv').config();
 // Uncomment and require these when ready
 const bodyParser = require('body-parser');
  const cors = require('cors');
- const AuthRouter = require('./Routes/AuthRouter');
-const ProductRouter = require('./Routes/ProductRouter');
+ const AuthRouter = require('./Routers/AuthRouter');
+const ProductRouter = require('./Routers/ProductRouter');
 
 // Database connection (Uncomment when ready)
 require('./Models/db');
