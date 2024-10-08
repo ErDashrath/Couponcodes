@@ -26,18 +26,150 @@
     -->
     <title>SwapCode</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  
+ <body>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">SwapCode</div>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="">Stores</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="submit.html">Submit Coupon</a></li>
+                    <li class="user-actions">
+                        <a href="https://couponcodes-ui.vercel.app/login" class="login-btn">Log In / Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Slideshow Section -->
+     
+    <section class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/offer1.jpg" alt="Offer 1">
+        </div>
+        <div class="slide fade">
+            <img src="images/offer2.jpg" alt="Offer 2">
+        </div>
+        <div class="slide fade">
+            <img src="images/offer3.jpg" alt="Offer 3">
+        </div>
+        <div class="slide fade">
+            <img src="images/offer4.jpg" alt="Offer 4">
+        </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <!-- Navigation Dots -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Coupons Section -->
+    <section class="coupons">
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/mamaearth.png" alt="Mamaearth Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">₹400 Cashback</p>
+                <p class="store">Mamaearth Special Offer</p>
+                <p class="description">Flat ₹400 Cashback on all products for all users.</p>
+                <a href="https://mamaearth.in/wow-wednesday-offer" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/bigrock.jpeg" alt="BigRock Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Up to 70% Off</p>
+                <p class="store">BigRock Hosting Deal</p>
+                <p class="description">Save up to 70% on advanced web hosting plus get a free domain.</p>
+                <a href="https://bigrockcoupon.in/" class="coupon-button" target="_blank">View Offer</a>
+            </div>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/amazon.png" alt="Amazon Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Up to 90% Off</p>
+                <p class="store">Amazon Deals</p>
+                <p class="description">Save up to 90% on a wide range of products.</p>
+                <a href="https://www.amazon.in/today-offer/s?k=today+offerv" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/redbus.jpeg" alt="RedBus Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">GrabOn Exclusive</p>
+                <p class="store">RedBus Offers</p>
+                <p class="description">Up to ₹500 off on your bus ticket bookings.</p>
+                <a href="https://www.redbus.in/travels/sree-balajee-travels-cargo?gad_source=1&gclid=CjwKCAjw8rW2BhAgEiwAoRO5rL9gDhj8UbwJoGqmzuFvleLEBZkaQaMfiRGQFCMBEzugHoD1rGBpixoCv_MQAvD_BwE" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/udemy.png" alt="Udemy Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Hot Deal</p>
+                <p class="store">Udemy Courses</p>
+                <p class="description">Up to 97% off on online courses.</p>
+                <a href="https://www.udemy.com/?deal_code=UDEAFNULP0324&utm_term=Homepage&utm_content=Textlink&utm_campaign=NewUserLP0324&utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=Sd2aiOckzgQ&ranMID=47901&ranEAID=Sd2aiOckzgQ&ranSiteID=Sd2aiOckzgQ-3gg16zjFWhwxDdZVuKkHPg" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/emma.png" alt="Emma Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Sale</p>
+                <p class="store">Emma Mattress</p>
+                <p class="description">Up to 55% off + ₹100 off on prepaid orders.</p>
+                <a href="https://www.emma-sleep.in/?gcaid=brand&utm_campaign=(IN)%3C00_mat%3E%5Bsearch-brand%5D%7Bep%7D&gad_source=1&gclid=CjwKCAjw8rW2BhAgEiwAoRO5rI_H-AKCk7PaUJlSxeq2sBUgKFmXGDl1tn_pIt0iNrkIhGY2x9-AbhoCAWAQAvD_BwE" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/addidas.png" alt="Emma Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Sale</p>
+                <p class="store">Addidas</p>
+                <p class="description">Up to 30% off + ₹300 off on prepaid orders.</p>
+                <a href="https://www.adidas.co.in/outlet?cm_mmc=AdieSEM_Google-_-adidas-Brand-B-Exact-_-Search-_--_-dv%3AeCom-_-cn%3Aadidas-Brand-B-Exact-_-pc%3AGoogle&cm_mmc1=IN&cm_mmc2=PPC-Multiple--Multiple-Multiple-IN-EMEA-eCom-Paid_Search&gad_source=1&gclid=CjwKCAjw8rW2BhAgEiwAoRO5rDS6jtIiKKga89qnY2hdBTGXOSQBTI14wjqg4-OcOg-jGmB0ASJkUBoCEvMQAvD_BwE" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+        <div class="coupon-card">
+            <div class="coupon-image">
+                <img src="images/levy.png" alt="Adidas Logo">
+            </div>
+            <div class="coupon-content">
+                <p class="discount">Sale</p>
+                <p class="store">Levi's T-shirts</p>
+                <p class="description">Up to 55% off + ₹100 off on prepaid orders.</p>
+                <a href="https://levi.in/collections/eoss-flat50-off?filter.p.product_type=Shirts&filter.p.product_type=Sweaters&filter.p.product_type=T-Shirts&filter.p.product_type=Tops&filter.p.product_type=Trousers&filter.p.product_type=Shirts&filter.p.product_type=Sweaters&filter.p.product_type=T-Shirts&filter.p.product_type=Tops&filter.p.product_type=Trousers&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1&sort_by=0&utm_source=Google&utm_medium=cpc&utm_campaign=Sok_Levi%27s_Brand_Product_Category_21022023" class="coupon-button"target="_blank">View Offer</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body> 
+
+ 
 </html>
